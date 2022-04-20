@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>금칙단어</title>
+</head>
+<body>
+    <h3>입력문자 감시하기</h3>
+    <div id="app">
+        <p>금지문자는 {{forbiddenText}}입니다.</p>
+        <textarea cols="30" rows="10" v-model="inputText"></textarea>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                forbiddenText:'안되',
+                inputText:'오늘은 첫 대면수업 중'
+                             
+            },
+            watch: {
+                inputText:function(){
+                    var re= this.inputText.indexOf(this.forbiddenText)
+                    if (re>-1){
+                        alert(this.forbiddenText+"라는 문자는 사용할 수 없습니다.")
+                        this.inputText=this.inputText.substr(0,re);
+                    }
+                }
+               
+
+                }
+                
+                        
+        })
+    </script>
+</body>
+</html>

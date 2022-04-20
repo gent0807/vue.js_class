@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>간단한 계산기</title>
+</head>
+<body>
+  <h2>간단한 계산기</h2>
+  <div id="app">
+  <input v-model.number="num1">
+  <input v-model.number="num2"><br>
+  <button v-on:click="plus">더하기</button>
+  <button v-on:click="minus">뺴  기</button>
+  <button v-on:click="mult">곱하기</button>
+  <button v-on:click="div">나누기</button>
+  <p>결과는 {{ re }}</p>
+  </div>
+  <script>
+    new Vue({
+      el:'#app',
+      data: {
+        num1:0,
+        num2:0,
+        re:0
+      },
+      methods:{
+        plus : function(){
+          this.re=this.num1+this.num2;
+        },
+        minus:function(){
+          this.re=this.num1-this.num2;
+        },
+        mult:function(){
+          this.re=this.num1*this.num2;
+        },
+        div:function(){
+          this.re=this.num1/this.num2;
+        
+        }
+
+      }
+
+
+    })
+  </script>
+</body>
+</html>

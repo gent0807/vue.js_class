@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <label><input type="checkbox" v-model="myVisible">표시</label>
+    <p v-if="myVisible">체크박스가 on</p>
+    <p v-else>체크박스가 off</p>
+    <hr>
+    <button v-if="isShow" v-on:click="good">좋아요~</button>
+  </div>
+  <script>
+    new Vue({
+      el:'#app',
+      data:{
+        myVisible:false,
+        isShow:true
+      },
+      methods:{
+        good:function(){
+          this.isShow=false;
+        }
+      }
+    })
+  </script>
+</body>
+</html>

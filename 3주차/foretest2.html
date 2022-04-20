@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <li v-for="n in 5">{{n}} X 2={{ n * 2}}</li>
+    <hr>
+    <li v-for="(item,index) in myArray">{{index+1}}:{{item}}</li>
+  </div>
+  <script>
+    new Vue({
+      el:'#app',
+      data:{
+        myArray:['봄','여름','가을','겨울']
+      }
+    })
+  </script>
+</body>
+</html>

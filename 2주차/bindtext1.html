@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>바인딩 테스트</title>
+</head>
+<body>
+  <div id="app">
+    <img src="flower1.png">직접 지정 <br>
+    <img v-bind:src="fileName">v-bind로 지정
+    <hr>
+    <p v-bind:align="MyAlign">
+    <a href="https://naver.com">직접 네이버로 이동</a><br>
+    <a v-bind:href="MyURL">v-bind로 이동</a></p>
+    <hr>
+    <p align="center">가운데 정렬</p>
+    <p v-bind:align="MyAlign">v-bind로 오른쬭 정렬</p>
+
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        fileName:'flower1.png',
+        MyURL:'https://naver.com',
+        MyAlign:'right'
+      }
+    })
+  </script>
+</body>
+</html>

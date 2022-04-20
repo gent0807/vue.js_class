@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    table{
+      width: 80%;
+      text-align: left;
+      
+    }
+    table th{
+      padding: 12px;
+      border-bottom: 2px solid darkgray;
+    }
+    table td{
+      padding: 12px;
+    }
+    table tr:nth-of-type(even){
+      background-color: aquamarine;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h2>배열데이터를 테이블로 표시하자</h2>
+  <div id="app">
+    <table>
+      <thead>
+      <th v-for="item in header">{{item}}</th>
+      </thead>
+      <tbody>
+        <tr v-for="line in ranking">
+          <td v-for="item in line">{{item}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    new Vue({
+      el:'#app',
+      data:{
+        header:['프로그래밍언어', 2018,2013,2008,2003,1998],
+        ranking: [
+          ['JAVA',1,2,1,1,16],
+          ['C',2,1,2,2,1],
+          ['C++',3,4,3,3,2],
+          ['Python',4,7,6,11,23],
+          ['JS',7,10,8,7,20]
+        ]
+          
+        
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>v-model 연습2</title>
+</head>
+<body>
+  <h2>v-model 적용2</h2>
+  <div id="app">
+    <label><input type="radio" value="red" v-model="myRadio">빨강</label><br>
+    <label><input type="radio" value="green" v-model="myRadio">초록</label><br>
+    <label><input type="radio" value="blue" v-model="myRadio">파랑</label><p></p>
+    {{myRadio}} 이 선택됨
+
+    <hr>
+    <label><input type="radio" value="flower1.png" v-model="fileName">flower</label><br>
+    <label><input type="radio" value="spring.jpg" v-model="fileName">spring</label><br>
+    {{fileName}} 그림이 선택됨 <br>
+    <img v-bind:src="fileName">
+    <hr>
+    <select v-model="myColor" multiple style="width: 150px;"> 
+      <option>red</option>
+      <option>green</option>
+      <option>blue</option>
+      <option>orange</option>
+      <option>brown</option>
+    </select>
+    <p v-bind:style="{color:myColor}">선택한 색상은 {{myColor}}입니다.</p>
+  </div>
+  <script>
+    new Vue({
+      el:'#app',
+      data:{
+        myRadio:'',
+        fileName:'',
+        myColor:''
+      }
+    })
+  </script>
+</body>
+</html>

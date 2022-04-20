@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>v-model 연습</title>
+</head>
+<body>
+  <h2>v-model 적용</h2>
+  <div id="app">
+    <input v-model.lazy="myName" placeholder="이름">
+    <p>나는 {{myName}} 입니다.</p> 
+    <hr>
+    <input v-model.number = "myNum" type="number">
+    <p>100을 더해서 표시하세요 {{100 + myNum}}</p>
+    <hr>
+    <input v-model.trim="mySentence">
+    <p>앞뒤 공백을 제거 「{{mySentence}}」</p>
+    <textarea v-model="myText"></textarea>
+    <p>문장은, 「{{myText}}」</p>
+    <p>문자수는 {{myText.length}} 글자 입니다.</p>
+    <hr>
+    <label>
+      <input type="checkbox" v-model="myCheck">
+      체크박스의 상태는 {{myCheck}}
+    </label>
+    <hr>
+    <label>
+      <input type="checkbox" value="red" v-model="myChecks">빨강<br>
+    </label>
+    <label>
+      <input type="checkbox" value="green" v-model="myChecks">초록<br>
+    </label>
+    <label>
+      <input type="checkbox" value="blue" v-model="myChecks">파랑<br>
+    </label>
+    내가 선택한 색은 {{myChecks}}입니다.
+    <hr>
+    <label>
+      <input type="checkbox" v-model="myAgree">동의합니다.
+      <button v-bind:disabled="myAgree==false">송신</button>
+    </label>
+  </div>
+  <script>
+    new Vue({
+      el:'#app',
+      data:{
+        myName:'',
+        myText:'오늘은 선거일입니다.',
+        myCheck:false,
+        myChecks: [],
+        myAgree:false,
+        myNum:0
+      }
+    })
+
+  </script>
+</body>
+</html>

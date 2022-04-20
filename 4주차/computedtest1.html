@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>계산 관련 예제 1</title>
+</head>
+<body>
+    <h3>금액 입력하기</h3>
+    <div id="app">
+    <input type="number" v-model.number="price">원 x <input type="number" v-model.number="count">개
+    <p>총금액은 {{ sum }} 원 입니다.</p>
+    <p>소비세를 반영한 가격은 {{ taxResult }}입니다.</p>
+    
+
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                price :100,
+                count :1
+            },
+            computed: {
+                sum: function(){
+                    return this.price * this.count;
+                },
+                taxResult: function(){
+                    return this.sum * 1.08;
+
+                }
+                
+            }
+        })
+    </script>
+</body>
+</html>

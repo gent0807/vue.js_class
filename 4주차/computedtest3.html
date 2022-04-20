@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h3>문자 입력하면 그 문자 포함한 항목 표시</h3>
+    <div id="app">
+    <input type="text" v-model="findWord">
+    <ul>
+        <li v-for="item in find">{{item}}</li>
+    </ul>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                findWord: '',
+                mountain:['설악산','한라산','지리산','북한산','백두산','소래산','태백산']               
+            },
+            computed: {
+                find: function(){
+                    if(this.findWord){
+                    return this.mountain.filter(function(value){
+                     return (value.indexOf(this.findWord)>-1)},this);
+                }
+                else return this.mountain;
+            }
+
+                }
+                
+            
+        })
+    </script>    
+</body>
+</html>

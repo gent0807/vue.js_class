@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <li v-for = "item in objArray">{{item.name}}\{{item.price}}</li>
+  </div>
+  <script>
+    new Vue({
+      el:'#app',
+      data:{
+        objArray:[
+          {name:'커피', price: 3500},
+          {name:'녹차', price: 4000},
+          {name:'아이스크림', price: 4500},
+          {name:'케이크', price: 5000}]
+      }
+    })
+  </script>
+</body>
+</html>

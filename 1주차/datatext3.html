@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h2>배열 연습입니다</h2>
+  <div id="app">
+    <p>{{ my_array}}</p>
+    <p>{{ my_array[0]}}</p> //머스타쉬
+  </div>
+  <script>
+    new Vue({
+      el:'#app',
+      data: {
+        my_array:['다즐링', '얼그레이', '실론']}
+    })
+  </script>
+</body>
+</html>
