@@ -6,11 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>레이아웃 연습하기</title>
     <!--초기화-->
-    <style></style>
+    <style>
+        *{margin:  0; padding: 0;}
+        body{font-family: sans-serif;}
+        li{list-style: none;}
+        a{text-decoration: none;}
+        img{border: 0;}
+    </style>
     <!--헤더-->
-    <style></style>
+    <style>
+        #main_header{
+            width: 960px;
+            margin: 0 auto;
+            height: 160px;
+            position:relative;
+        }
+        #main_header > #title{
+            position:absolute;
+            left:20px;
+            top:30px;
+        }
+        #main_header > #main_gnb{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        #main_header > #main_lnb{
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+    </style>
     <!--타이틀-->
-    <style></style>
+    <style>
+
+    </style>
     <!--메뉴1-->
     <style></style>
     <!--메뉴2-->
@@ -79,18 +109,91 @@
             </section>
             <div class="tab_item">
                 <ul>
-                    <li><a href="">HTML5 Canvas</a></li>
-                    <li><a href="">HTML5 Audio</a></li>
-                    <li><a href="">HTML5 Video</a></li>
-                    <li><a href="">HTML5 Semantic Web Sample</a></li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://via.placeholder.com/45">
+                            </div>
+                            <div class="description">
+                                <strong>HTML5 Canvas <p>2022-05-12</p></strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://via.placeholder.com/45">
+                            </div>
+                            <div class="description">
+                                <strong>HTML5 Audio <p>2022-05-12</p></strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://via.placeholder.com/45">
+                            </div>
+                            <div class="description">
+                                <strong>HTML5 Video <p>2022-05-12</p></strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://via.placeholder.com/45">
+                            </div>
+                            <div class="description">
+                                <strong>HTML5 Semantic Web Sample <p>2022-05-12</p></strong>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="tab_item">
                 <ul>
-                    <li><a href="">CSS3 Transition</a></li>
-                    <li><a href="">CSS3 sam1</a></li>
-                    <li><a href="">CSS3 sam2</a></li>
-                    <li><a href="">CSS3 sam3</a></li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://via.placeholder.com/45">
+                            </div>
+                            <div class="description">
+                                <strong>CSS3 <p>2022-05-12</p></strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://via.placeholder.com/45">
+                            </div>
+                            <div class="description">
+                                <strong>CSS3 sam1<p>2022-05-12</p></strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://via.placeholder.com/45">
+                            </div>
+                            <div class="description">
+                                <strong>CSS3 sam2<p>2022-05-12</p></strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://via.placeholder.com/45">
+                            </div>
+                            <div class="description">
+                                <strong>CSS3 sam3<p>2022-05-12</p></strong>
+                            </div>
+                        </a>
+                    </li>
+                    
                 </ul>
             </div>
         </aside>
