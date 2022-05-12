@@ -81,7 +81,23 @@
         #main_lnb > ul >li:last-child>a{border-radius: 0 10px 10px 0;}
     </style>
     <!--콘텐츠-->
-    <style></style>
+    <style>
+        #content{
+            
+            width: 960px;
+            /*가운데 정렬*/
+            margin: 0 auto; 
+            overflow: hidden;
+        }
+        #content > #main_section{
+            width: 750px;
+            float: left;
+        }
+        #content > #main_aside{
+            width: 200px;
+            float: right;
+        }
+    </style>
     <!--본문-->
     <style></style>
     <!--사이드-->
@@ -136,8 +152,8 @@
             </article>
         </section>
         <aside id="main_aside">
-            <input type="radio" id="first" name="tab" checked="checked" />
-            <input type="radio" id="second" name="tab" />
+            <input type="radio" id="first" name="tab" checked="checked">
+            <input type="radio" id="second" name="tab">
             <section class="buttons">
                 <label for="first">First</label>
                 <label for="second">Second</label>  
