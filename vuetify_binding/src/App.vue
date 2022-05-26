@@ -38,13 +38,16 @@
     <v-main>
       <router-view></router-view>
     </v-main>
+    <FooterComponent></FooterComponent>
   </v-card>
 </template>
 <script>
 import HeaderComponent from './HeaderCom.vue'
+import FooterComponent from './FooterCom.vue'
 export default {
   components: {
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   },
   data () {
     return {
