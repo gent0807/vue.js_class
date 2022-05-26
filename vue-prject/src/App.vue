@@ -4,10 +4,10 @@
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
-            Application
+            할일 정하기
           </v-list-item-title>
           <v-list-item-subtitle>
-            subtext
+            vuetify2-sys
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -21,6 +21,7 @@
         <v-list-item
           v-for="item in items"
           :key="item.title"
+          :to="item.to"
           link
         >
           <v-list-item-icon>
@@ -44,8 +45,8 @@ export default {
   data () {
     return {
       items: [
-        { title: 'ToDo', icon: 'mdi-checkbox-marked-circle-plus-outline' },
-        { title: 'About', icon: 'mdi-help-box' }
+        { title: 'ToDo', icon: 'mdi-checkbox-marked-circle-plus-outline', to: '/' },
+        { title: 'About', icon: 'mdi-help-box', to: '/about' }
       ],
       right: null
     }
