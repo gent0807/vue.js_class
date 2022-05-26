@@ -1,5 +1,6 @@
 <template>
   <v-card>
+    <HeaderComponent></HeaderComponent>
     <v-navigation-drawer app>
       <v-list-item>
         <v-list-item-content>
@@ -40,8 +41,11 @@
   </v-card>
 </template>
 <script>
-
+import HeaderComponent from './HeaderCom.vue'
 export default {
+  components: {
+    HeaderComponent
+  },
   data () {
     return {
       items: [
