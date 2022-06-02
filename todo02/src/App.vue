@@ -3,173 +3,220 @@
     <v-app-bar app>
       헤더
     </v-app-bar>
-    <v-navigation-drawer app>메뉴</v-navigation-drawer>
+    <v-navigation-drawer app>
+      메뉴
+    </v-navigation-drawer>
     <v-main>
       <v-container fluid>
         컨텐츠 영역
-        <v-row>
+        <v-row        >
+          <v-col v-for="count in 12"
+          :key="count"
+          cols="4">
+            <v-card
+              class="pa-3"
+              outlined
+            >
+              col
+            </v-card>
+          </v-col>
+          </v-row>
+       <!----
+       <v-row
+          dense
+          :style="{height: '120px'}"
+          class="blue"
+          align="end"
+        >
           <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col>
+          </v-col>
+          <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col>
+          </v-col>
+          <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col>
+          </v-col>
+          <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col>
+          </v-col>
+          <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col>
+          </v-col>
+          <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col>
+          </v-col>
+          <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-
+          </v-col>
         </v-row>
         <v-row justify="space-around">
           <v-col cols="auto">
             <v-card
-            class="pa-3"
-            outlined >
-              col
-            </v-card>
-          </v-col >
-           <v-col cols="auto">
-            <v-card
-            class="pa-3"
-            outlined >
-              col
-            </v-card>
-          </v-col >
-           <v-col cols="auto">
-            <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
           </v-col>
-           <v-col cols="auto">
+          <v-col cols="auto">
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col cols="auto">
+          </v-col>
+          <v-col cols="auto">
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col cols="auto">
+          </v-col>
+          <v-col cols="auto">
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col cols="auto">
+          </v-col>
+          <v-col cols="auto">
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-
+          </v-col>
+          <v-col cols="auto">
+            <v-card
+              class="pa-3"
+              outlined
+            >
+              col
+            </v-card>
+          </v-col>
+          <v-col cols="auto">
+            <v-card
+              class="pa-3"
+              outlined
+            >
+              col
+            </v-card>
+          </v-col>
         </v-row>
-        <v-row>
+        <v-row
+          dense
+          :style="{height: '120px'}"
+          class="red"
+          align="end"
+        >
+          <v-col
+            class="align"
+            align-self="start"
+          >
+            <v-card
+              class="pa-3"
+              outlined
+            >
+              col
+            </v-card>
+          </v-col>
           <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col>
+          </v-col>
+          <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col>
+          </v-col>
+          <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col>
+          </v-col>
+          <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col>
+          </v-col>
+          <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col>
+          </v-col>
+          <v-col>
             <v-card
-            class="pa-3"
-            outlined >
+              class="pa-3"
+              outlined
+            >
               col
             </v-card>
-          </v-col >
-           <v-col>
-            <v-card
-            class="pa-3"
-            outlined >
-              col
-            </v-card>
-          </v-col >
-
-        </v-row>
+          </v-col>
+        </v-row>-->
       </v-container>
     </v-main>
     <v-footer app>
       <v-card
-      class="pa-3"
-      outlined
-      :height="50">
+        class="pa-3"
+        outlined
+        :height="50"
+      >
         푸터
       </v-card>
     </v-footer>
