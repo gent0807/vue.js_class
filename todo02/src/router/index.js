@@ -5,7 +5,6 @@ import ToDo from '../views/ToDo.vue'
 Vue.use(VueRouter)
 
 const routes = [
-
   {
     path: '/',
     name: 'todo',

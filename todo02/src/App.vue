@@ -1,6 +1,13 @@
 <template>
   <v-card>
-    <HeaderComponent></HeaderComponent>
+    <v-app-bar app color="#fcb69f" dark src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" prominent>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-toolbar-title>정현이의 할일 모음</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon>mdi-export</v-icon>
+      </v-btn>
+    </v-app-bar>
     <v-navigation-drawer app>
       <v-list-item>
         <v-list-item-content>
@@ -8,7 +15,7 @@
             할일 정하기
           </v-list-item-title>
           <v-list-item-subtitle>
-            vuetify2-sys
+            vuetify2-wjh
           </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -38,21 +45,15 @@
     <v-main>
       <router-view></router-view>
     </v-main>
-    <FooterComponent></FooterComponent>
   </v-card>
 </template>
+
 <script>
-import HeaderComponent from './HeaderCom.vue'
-import FooterComponent from './FooterCom.vue'
 export default {
-  components: {
-    HeaderComponent,
-    FooterComponent
-  },
   data () {
     return {
       items: [
-        { title: 'ToDo', icon: 'mdi-checkbox-marked-circle-plus-outline', to: '/' },
+        { title: 'Todo', icon: 'mdi-checkbox-marked-circle-plus-outline', to: '/' },
         { title: 'About', icon: 'mdi-help-box', to: '/about' }
       ],
       right: null
