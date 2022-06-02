@@ -1,14 +1,14 @@
 <template>
   <v-card>
     <v-app-bar app color="#fcb69f" dark src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" prominent>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="drawer=!drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>정현이의 할일 모음</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon>
         <v-icon>mdi-export</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-navigation-drawer app>
+    <v-navigation-drawer v-model="drawer" app>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
@@ -52,6 +52,7 @@
 export default {
   data () {
     return {
+      drawer: false,
       items: [
         { title: 'Todo', icon: 'mdi-checkbox-marked-circle-plus-outline', to: '/' },
         { title: 'About', icon: 'mdi-help-box', to: '/about' }
