@@ -55,7 +55,8 @@ export default {
       drawer: false,
       items: [
         { title: 'Todo', icon: 'mdi-checkbox-marked-circle-plus-outline', to: '/' },
-        { title: 'About', icon: 'mdi-help-box', to: '/about' }
+        { title: 'About', icon: 'mdi-help-box', to: '/about' },
+        { title: 'Grid', icon:'mdi-application-export', to:'/gridsystem'}
       ],
       right: null
     }

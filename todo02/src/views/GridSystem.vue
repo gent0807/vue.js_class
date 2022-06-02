@@ -1,0 +1,13 @@
+<template>
+  <v-container>
+    <v-card>
+      <v-row>
+        <v-col>
+          <v-card>
+            col
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-card>
+  </v-container>
+</template>
