@@ -1,9 +1,9 @@
 <template>
-  <v-container>
-    <v-card>
+  <v-container fluid>
+    <v-card class="green pa-3">
       <v-row>
         <v-col>
-          <v-card>
+          <v-card class="pa-3" outlined>
             col
           </v-card>
         </v-col>
