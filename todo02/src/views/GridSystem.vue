@@ -3,7 +3,10 @@
     <v-card class="green pa-3">
       <v-row>
         <v-col>
-          <v-card class="pa-3" outlined>
+          <v-card
+            class="pa-3"
+            outlined
+          >
             col
           </v-card>
         </v-col>
