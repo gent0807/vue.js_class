@@ -1,224 +1,74 @@
 <template>
-  <v-app>
-    <v-app-bar app>
-      헤더
+  <v-card>
+    <v-app-bar
+      app
+      color="#fcb69f"
+      dark
+      src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+      prominent
+    >
+      <v-app-bar-nav-icon @click="drawer=!drawer" />
+      <v-toolbar-title>정현이의 할일 모음</v-toolbar-title>
+      <v-spacer />
+      <v-btn icon>
+        <v-icon>mdi-export</v-icon>
+      </v-btn>
     </v-app-bar>
-    <v-navigation-drawer app>
-      메뉴
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+    >
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6">
+            할일 정하기
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            vuetify2-wjh
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider />
+
+      <v-list
+        dense
+        nav
+      >
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          :to="item.to"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
     </v-navigation-drawer>
     <v-main>
-      <v-container fluid>
-        컨텐츠 영역
-        <v-row        >
-          <v-col v-for="count in 12"
-          :key="count"
-          cols="4">
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          </v-row>
-       <!----
-       <v-row
-          dense
-          :style="{height: '120px'}"
-          class="blue"
-          align="end"
-        >
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-        </v-row>
-        <v-row justify="space-around">
-          <v-col cols="auto">
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col cols="auto">
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col cols="auto">
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col cols="auto">
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col cols="auto">
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col cols="auto">
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col cols="auto">
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-        </v-row>
-        <v-row
-          dense
-          :style="{height: '120px'}"
-          class="red"
-          align="end"
-        >
-          <v-col
-            class="align"
-            align-self="start"
-          >
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-          <v-col>
-            <v-card
-              class="pa-3"
-              outlined
-            >
-              col
-            </v-card>
-          </v-col>
-        </v-row>-->
-      </v-container>
+      <router-view />
     </v-main>
-    <v-footer app>
-      <v-card
-        class="pa-3"
-        outlined
-        :height="50"
-      >
-        푸터
-      </v-card>
-    </v-footer>
-  </v-app>
+  </v-card>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      drawer: false,
+      items: [
+        { title: 'Todo', icon: 'mdi-checkbox-marked-circle-plus-outline', to: '/' },
+        { title: 'About', icon: 'mdi-help-box', to: '/about' },
+        { title: 'Grid', icon:'mdi-application-export', to:'/gridsystem'}
+      ],
+      right: null
+    }
+  }
+}
+</script>
